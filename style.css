@@ -1,0 +1,44 @@
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(4, 50px);
+  gap: 2px;
+  background-color: rgba(0, 0, 0, 0.623);
+  width: 206px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.calcContainer {
+  background-color: rgb(209, 236, 236);
+  width: 217px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.display {
+  width: 205px;
+  height: 50px;
+  background-color: aquamarine;
+  padding: 5px;
+  border-radius: 5px;
+}
+button {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px #0000009d;
+  outline-offset: 10px;
+}
+#btnClear {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
