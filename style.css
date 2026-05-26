@@ -42,3 +42,8 @@ button {
   font-size: 14px;
   font-weight: 700;
 }
+
+button:focus,
+button:focus-visible {
+  outline: none;
+}

@@ -3,7 +3,7 @@ let display = document.querySelector(".display")
 let btnEqual = document.querySelector("#butnEql")
 let btnClear = document.querySelector("#btnClear")
 const buttons = document.querySelectorAll(".btns")
-let buttonValue = ""
+let expression = ""
 
 btnClear.addEventListener("click", clear)
 
@@ -16,18 +16,30 @@ buttons.forEach((button) => {
 })
 
 function getValue(e) {
-  buttonValue += e.target.value
-  display.innerText = buttonValue
+  expression += e.target.value
+  display.innerText = expression
 }
 function calculate() {
-  if (buttonValue) {
-    let result = eval(buttonValue)
+  if (expression) {
+    let result = eval(expression)
     //round off result to 2 decimal places
     display.innerText = parseFloat(result.toFixed(2))
-    buttonValue = ""
+    expression = ""
   }
 }
 function clear() {
   display.innerText = ""
-  buttonValue = ""
+  expression = ""
 }
+
+function keyBoardInput() {
+  window.addEventListener("keydown", (e) => {
+    e.preventDefault()
+    if (e.key === "Enter") {
+      display.innerText = parseFloat(eval(expression).toFixed(2))
+      expression = ""
+    }
+  })
+}
+
+keyBoardInput()
