@@ -14,11 +14,13 @@ buttons.forEach((button) => {
     getValue(e)
   })
 })
-
+//Storing user input
 function getValue(e) {
   expression += e.target.value
   display.innerText = expression
 }
+
+//calculation
 function calculate() {
   if (expression) {
     let result = eval(expression)
@@ -27,11 +29,13 @@ function calculate() {
     expression = ""
   }
 }
+//Clearing display and stored expression value
 function clear() {
   display.innerText = ""
   expression = ""
 }
 
+//"Enter" key handling.
 function keyBoardInput() {
   window.addEventListener("keydown", (e) => {
     e.preventDefault()
