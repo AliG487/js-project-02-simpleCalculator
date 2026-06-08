@@ -95,9 +95,9 @@ function calculate() {
 
 ## 📚 Files Explained
 
-- `index.html` - HTML structure with input field and greeting display
-- `style.css` - Styling with gradient background
-- `script.js` - JavaScript logic for greeting functionality
+- `index.html` - HTML structure with numeric buttons and result display
+- `style.css` - Styling with simple look
+- `script.js` - JavaScript logic for calculation functionality
 
 ## ✅ Features Breakdown
 
